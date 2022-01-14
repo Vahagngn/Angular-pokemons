@@ -1,0 +1,25 @@
+<div class="pokemons-list">
+    <h2>Pokemons List</h2>
+    <div class="search-container">
+        <!-- <ng-select class="search-text">
+            <ng-option></ng-option>
+        </ng-select> -->
+        <select>
+            <option *ngFor="let pokemon of pokemons"> {{pokemon?.name}} </option>
+        </select>
+        <!-- <input [(ngModel)]="searchStr" /> -->
+        <div class="button-container">
+            <button class="search-button" type="submit">Search by type</button>
+        </div>
+    </div>
+    <hr style="border: solid #7747be 1px" />
+
+    <div class="pokemons-kontainer"
+        *ngFor="let pokemon of pokemons | paginate: { itemsPerPage: 10, currentPage: page, totalItems: countPokemons }">
+        <a routerLink='/pokemon-info/{{pokemon?.name}}'>
+            <div>{{pokemon?.name}}</div>
+        </a>
+    </div>
+
+    <pagination-controls (pageChange)="page = $event; pokemons = []; getAllPokemons()"></pagination-controls>
+</div>

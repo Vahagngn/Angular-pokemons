@@ -1,0 +1,68 @@
+.pokemons-list{
+    position: relative;
+    top: 100px;
+    margin: auto;
+    width: 24%;
+    height: 600px;
+    color: white;
+    font-family: "Lucida Console", "Courier New", sans-serif;
+
+    select{
+        font-weight: bold;
+        border-radius: 5px;
+        font-size: 22px;
+        width: 40%;
+        cursor: pointer;
+        option {
+            font-size: 22px;
+        }
+    }
+
+    .search-container{
+        display: flex;
+        justify-content: space-between;
+
+        .search-text{
+            border-radius: 5px;
+            background: white; 
+            width: 45%;
+            height: 30px;
+        }
+
+        .search-button {
+            background: #7747be;
+            color: white;
+            border-radius: 5px;
+            width: 120px;
+            height: 30px;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .pokemons-kontainer{
+        width: 100%;
+        height: 45px;
+        margin-top: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        background: #7747be;
+
+        &:hover{
+            transition: 1s;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        div{
+            position: relative;
+            top: 30%;
+            left: 5%;
+        }
+    }
+}

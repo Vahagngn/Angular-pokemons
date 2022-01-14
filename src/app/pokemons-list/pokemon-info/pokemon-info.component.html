@@ -1,0 +1,29 @@
+<div class="information">
+    <div class="pokemon-name">
+        {{pokemon.name}}
+    </div>
+    <div class="image-container">
+        <img mat-card-avatar class="header-image" src="{{pokemonImg}}">
+    </div>
+
+    <div class="info-container">
+        <p>Weight:<span> {{pokemon?.weight}} g.</span></p>
+        <p>Height:<span> {{pokemon?.height}} cm</span></p>
+        <p>Base Experience:<span> {{pokemon?.base_experience}} xp</span></p>
+        <p>Order:<span> {{pokemon?.order}}</span></p>
+    </div>
+
+    <div class="stats">
+        <h4>Stats</h4>
+        <div class="stats-style" *ngFor="let stat of pokemon?.stats">
+            <span>{{stat.stat.name}}({{stat?.base_stat}}) &nbsp;</span>
+        </div>
+    </div>
+
+    <div class="types">
+        Types:
+        <span *ngFor="let type of pokemon?.types">
+            <b>{{type?.type?.name}}</b>
+        </span>
+    </div>
+</div>

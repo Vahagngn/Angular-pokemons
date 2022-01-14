@@ -1,0 +1,16 @@
+.back-home{
+    cursor: pointer;
+    position: fixed;
+    left: 50px;
+    top: 40px;
+    color: white;
+    background: #7747be;
+    border: none;
+    font-size: 22px;
+    width: 80px;
+    border-radius: 5px;
+
+    &:hover {
+        font-weight: bold;
+    }
+}
